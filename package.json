@@ -1,0 +1,12 @@
+{
+  "name": "mini-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "piezo-speaker.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anh Le Hoang",
+  "license": "MIT",
+  "dependencies": {}
+}

@@ -10,7 +10,7 @@ var sleep = function(s){
 
 wpi.wiringPiSetupPhys();
 
-var pinX = 11;
+var pinX = 33;
 wpi.pinMode(pinX, wpi.OUTPUT);
 
 var status = 0;
@@ -19,4 +19,4 @@ setInterval(function(){
 	console.log(`now write ${status}`);
 	status = status == 0? 1 : 0;
 	wpi.digitalWrite(pinX, status);
-}, 500);
+}, 2);

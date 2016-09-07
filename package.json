@@ -8,5 +8,7 @@
   },
   "author": "Anh Le Hoang",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "node-max7219": "^1.0.1"
+  }
 }

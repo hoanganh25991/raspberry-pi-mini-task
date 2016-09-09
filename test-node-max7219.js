@@ -1,16 +1,16 @@
 var Max7219 = require('node-max7219');
 
-var options = {
-	device: 'matrix',
-	cascaded: 8,
-	vertical: true
-};
-
 // var options = {
-// 	device: 'sevensegment',
-// 	cascaded: 2,
-// 	vertical: false
+// 	device: 'matrix',
+// 	cascaded: 8,
+// 	vertical: true
 // };
+
+var options = {
+	device: 'sevensegment',
+	cascaded: 2,
+	vertical: false
+};
 
 var max7219 = Max7219(options);
 

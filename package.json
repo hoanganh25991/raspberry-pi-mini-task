@@ -9,6 +9,7 @@
   "author": "Anh Le Hoang",
   "license": "MIT",
   "dependencies": {
-    "node-max7219": "^1.0.1"
+    "node-max7219": "^1.0.1",
+    "raspicam": "^0.2.13"
   }
 }

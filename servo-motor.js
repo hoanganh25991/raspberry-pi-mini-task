@@ -44,23 +44,39 @@
 
 var piblaster = require('pi-blaster.js');
 
-const min = 0.05;
-const max = 0.26;
+// const min = 0.05;
+// const max = 0.26;
 
-piblaster.current = min;
-piblaster.move = function(pin){
-	piblaster.current += 0.01;
-	piblaster.setPwm(pin, piblaster.current);
-};
+// piblaster.current = min;
+// piblaster.move = function(pin){
+// 	piblaster.current += 0.01;
+// 	piblaster.setPwm(pin, piblaster.current);
+// };
 
-// piblaster.setPwm(17, 0.2);
+// var interval = setInterval(function(){
+// 	if(piblaster.current >= max){
+// 		clearInterval(interval);
+// 		// process.exit(1);
+// 	}
+// 	console.log('move');
+// 	piblaster.move(17);
+// }, 100);
 
-var interval = setInterval(function(){
-	if(piblaster.current >= max){
-		clearInterval(interval);
-		// process.exit(1);
-	}
-	console.log('move');
-	piblaster.move(17);
-}, 100);
+// const min = 0.16;
+// const max = 0.23;
+
+// piblaster.current = min;
+// piblaster.move = function(pin){
+// 	piblaster.current += 0.01;
+// 	piblaster.setPwm(pin, piblaster.current);
+// };
+
+// var interval = setInterval(function(){
+// 	if(piblaster.current >= max){
+// 		clearInterval(interval);
+// 		// process.exit(1);
+// 	}
+// 	console.log('move');
+// 	piblaster.move(18);
+// }, 100);
 

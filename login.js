@@ -4,46 +4,23 @@ wpi.wiringPiSetupPhys();
 
 var Piezo = require('./piezo/piezo.js');
 
-var piezo = new Piezo({pin: 40}, wpi);
+var piezo = new Piezo({
+	pin: 40
+}, wpi);
 
 var collection = require('./piezo/mario.js');
 
-// console.log(collection.mario);
+var p;
 
-// Plays a song
 piezo.play({
-  // song is composed by an array of pairs of notes and beats
-  // The first argument is the note (null means "no note")
-  // The second argument is the length of time (beat) of the note (or non-note)
-  // song: [
-  //   ["C4", 1 / 4],
-  //   ["D4", 1 / 4],
-  //   ["F4", 1 / 4],
-  //   ["D4", 1 / 4],
-  //   ["A4", 1 / 4],
-  //   [null, 1 / 4],
-  //   ["A4", 1],
-  //   ["G4", 1],
-  //   [null, 1 / 2],
-  //   ["C4", 1 / 4],
-  //   ["D4", 1 / 4],
-  //   ["F4", 1 / 4],
-  //   ["D4", 1 / 4],
-  //   ["G4", 1 / 4],
-  //   [null, 1 / 4],
-  //   ["G4", 1],
-  //   ["F4", 1],
-  //   [null, 1 / 2]
-  // ]
-  song: collection.mario,
-  // song: collection.marioUnderworld,
-  // tempo: 50,
-  
-}, function(){
-    process.exit(1);
-  }
-);
+	// song: collection.mario,
+	song: collection.marioBrief
+}, function() {
+	wpi.digitalWrite(40, 0);
+	var exec = require('child_process').exec;
+	p = exec('python clock.py');
+});
 
-wpi.digitalWrite(40, 0);
-
-// process.exit(1);
+process.on('exit', function(){
+	p.kill();
+});

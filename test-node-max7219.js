@@ -39,10 +39,14 @@ var max7219 = Max7219(options);
 // });
 
 /**
- * test new feature of node-max7219
+ * TEST NEW FEATURE OF NODE-MAX7219 v2
  */
+/**
+ * old feauture should work
+ */
+// max7219.drawText('message');
 // max7219.showMessage({
-// 	text: 'hoanganh',
+// 	text: 'message',
 // 	scroll: 'up'
 // });
 
@@ -88,9 +92,17 @@ var max7219 = Max7219(options);
 
 /* test writeText */
 // max7219.writeText('message');
-max7219.writeText({
-	text: 'message',
-	orientation: 90,
-	invert: 1
+// max7219.writeText({
+// 	text: 'message',
+// 	orientation: 90,
+// 	invert: 1
+// });
+
+/**
+ * test on debug info|error
+ */
+max7219.setOptions({
+	device: 'abc'
 });
 
+max7219.showMessage('message');

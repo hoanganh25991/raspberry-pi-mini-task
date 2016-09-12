@@ -51,7 +51,7 @@ var max7219 = Max7219(options);
  */
 max7219.showMessage({
 	text: 'message',
-	scroll: 'right'
+	font: 'TINY_FONT'
 });
 
 // max7219.on('close', function(){
@@ -68,12 +68,10 @@ max7219.showMessage({
 
 /**
  * test setOptions
- * @type {[type]}
  */
 // max7219.setOptions({
-// 	brightness: 255
+// 	brightness: 1
 // });
-
 
 // max7219.showMessage({
 // 	text: 'message'

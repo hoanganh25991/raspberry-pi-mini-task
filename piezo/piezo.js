@@ -13,20 +13,22 @@ function clearTimer() {
   delete this.timer;
 }
 
-var Controllers = {
-  /**
-   * Timer-based tone generator using digital high/low piezo.
-   */
-  DEFAULT: {
+var Controllers = function(board){
+  return {
+    /**
+     * Timer-based tone generator using digital high/low piezo.
+     */
     initialize: {
       writable: true,
       value: function() {
-        this.pinMode(this.pin, this.OUTPUT);
+        // var board = this.board;
+        board.pinMode(board.pin, board.OUTPUT);
       },
     },
     tone: {
       writable: true,
       value: function(tone, duration) {
+        // var board = this.board;
         if (isNaN(tone) || isNaN(duration)) {
           // Very Bad Things happen if one tries to play a NaN tone
           throw new Error(
@@ -34,33 +36,33 @@ var Controllers = {
           );
         }
 
-        clearTimer.call(this);
+        clearTimer.call(board);
 
-        var timer = this.timer = new Timer();
+        var timer = board.timer = new Timer();
         var value = 1;
 
         timer.setInterval(function() {
           value = value === 1 ? 0 : 1;
-          this.digitalWrite(this.pin, value);
+          board.digitalWrite(board.pin, value);
 
           if ((timer.difTime / 1000000) > duration) {
-            clearTimer.call(this);
+            clearTimer.call(board);
           }
-        }.bind(this), null, tone + "u", function() {});
+        }.bind(board), null, tone + "u", function() {});
 
-        return this;
+        return board;
       },
     },
     noTone: {
       writable: true,
       value: function() {
-        this.digitalWrite(this.pin, 0);
-        clearTimer.call(this);
+        board.digitalWrite(board.pin, 0);
+        clearTimer.call(board);
 
-        return this;
+        return board;
       },
-    },
-  }
+    }
+  };
 };
 
 function Piezo(opts, board) {
@@ -71,13 +73,15 @@ function Piezo(opts, board) {
 
   var controller;
 
-  controller = Controllers.DEFAULT;
+  controller = Controllers(board);
   
   Object.defineProperties(this, controller);
 
   Object.assign(board, opts);
 
-  board.call(this, controller, opts);
+  controller.board = board;
+  
+  // board.call(this, controller, opts);
 
   // Piezo instance properties
   var state = {

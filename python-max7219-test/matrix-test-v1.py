@@ -10,11 +10,22 @@ from random import randrange
 device = led.matrix(cascaded=4,vertical=True)
 ###############################
 # we how to show_msg, then scroll
-# device.scroll_right()
-device.orientation(90)
+# device.orientation(90)
 # device.invert(1)
-device.show_message('hello world')
+device.show_message('hello')
+device.scroll_right()
+device.scroll_right()
+device.scroll_right()
 # device.invert(1)
+
+#############################
+# scroll_down
+# device.show_message('hell')
+# device.scroll_down()
+# device.scroll_down()
+# device.scroll_down()
+# device.scroll_down()
+# device.scroll_down()
 
 ##############################
 # orientation work on LETTER

@@ -11,20 +11,22 @@ device = led.matrix(cascaded=4,vertical=True)
 ###############################
 # we how to show_msg, then scroll
 # device.scroll_right()
-# device.show_message('hello world')
-# device.scroll_right()
+device.orientation(90)
+# device.invert(1)
+device.show_message('hello world')
+# device.invert(1)
 
 ##############################
 # orientation work on LETTER
-device.orientation(180)
-device.letter(3, ord('H'))
 # device.orientation(180)
-device.letter(2, ord('O'))
-# device.orientation(180)
-device.letter(1, ord('A'))
-# device.orientation(180)
-device.letter(0, ord('N'))
-# device.orientation(180)
+# device.letter(3, ord('H'))
+# # device.orientation(180)
+# device.letter(2, ord('O'))
+# # device.orientation(180)
+# device.letter(1, ord('A'))
+# # device.orientation(180)
+# device.letter(0, ord('N'))
+# # device.orientation(180)
 # device.invert(1)
 # not work with
 # device.scroll_right()
@@ -36,5 +38,6 @@ device.letter(0, ord('N'))
 # device.show_message('h')
 
 ############################
-device._orientation = 180
-device.show_message('hello')
+# not work orientation on TEXT
+# device._orientation = 180
+# device.show_message('hello')

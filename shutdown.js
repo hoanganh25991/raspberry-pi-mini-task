@@ -1,4 +1,4 @@
-var sound = require('./piezo/login-sound.js');
+var sound = require('./piezo/shutdown-sound.js');
 
 var exec = require('child_process').exec;
 

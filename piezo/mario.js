@@ -270,7 +270,7 @@ var marioUnderworld = build(underworld_melody, underworld_tempo);
 
 var marioBrief = build(briefMelody, briefTempo);
 
-var shutdown = build(shudwon, shutdownTempo);
+var shutdown = build(shutdown, shutdownTempo);
 
 module.exports = {
   mario: mario,

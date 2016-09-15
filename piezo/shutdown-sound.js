@@ -15,7 +15,7 @@ var sound = {};
 sound.play = function(){
 	piezo.play({
 		// song: collection.mario,
-		song: collection.marioBrief
+		song: collection.shutdown
 	}, function() {
 		wpi.digitalWrite(33, 0);
 	});

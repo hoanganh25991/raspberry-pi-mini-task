@@ -150,6 +150,8 @@ var briefMelody = [
   NOTE_D7, NOTE_B6, 0, 0,
 ];
 
+
+
 //Mario main them tempo
 var tempo = [
   12, 12, 12, 12,
@@ -240,6 +242,18 @@ var underworld_tempo = [
   3, 3, 3
 ];
 
+/* shutdown siganl */
+var shutdown = [
+  0, NOTE_E7, 0, NOTE_C7,
+  NOTE_D7, NOTE_B6, 0, 0,
+];
+
+var shutdownTempo = [
+  12, 12, 12, 12,
+  12, 12, 12, 12,
+];
+
+/* build from node&howlong a beat */
 var build = function(melody, temp){
   var soundArr = [];
   melody.forEach(function(node, pos){
@@ -256,8 +270,11 @@ var marioUnderworld = build(underworld_melody, underworld_tempo);
 
 var marioBrief = build(briefMelody, briefTempo);
 
+var shutdown = build(shudwon, shutdownTempo);
+
 module.exports = {
   mario: mario,
   marioUnderworld: marioUnderworld,
-  marioBrief: marioBrief
+  marioBrief: marioBrief,
+  shutdown: shutdown
 };

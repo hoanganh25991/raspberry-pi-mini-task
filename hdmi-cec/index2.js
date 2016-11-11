@@ -26,6 +26,14 @@ cec.once( 'ready', function(client) {
   let replEnv = repl.start('>');
   replEnv.context.client = client;
   replEnv.context.CEC = CEC;
+  /**
+   * To switch input run
+   */
+  // client.sendCommand(0xf0, CEC.Opcode.ROUTING_CHANGE, 0x40, 0x00, 0x10, 0x00); // change from 4 to 1
+  /**
+   * 0x40 0x00 > HDMI 4
+   * 0x10 0x00 > HDMI 1
+   */
 });
 
 cec.on( 'REPORT_POWER_STATUS', function (packet, status) {

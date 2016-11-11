@@ -1,5 +1,7 @@
 let NodeCEC = require('nodecec');
 
+let repl = require('repl');
+
 let cec = new NodeCEC();
 
 // start cec connection
@@ -28,6 +30,8 @@ cec.on('error', function(data) {
 });
 
 let stdin = process.openStdin();
-stdin.on('data', function(chunk) { 
+stdin.on('data', function(chunk) {
     cec.send(chunk);
+	console.log('send cmd', chunk);
 });
+

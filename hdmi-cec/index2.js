@@ -1,4 +1,6 @@
-{NodeCec, CEC}= require( 'node-cec' );
+let libcec = require( 'node-cec' );
+let NodeCec = libcec.NodeCec;
+let CEC = libcec.CEC;
 
 let cec = new NodeCec( 'node-cec-monitor' );
 
@@ -21,7 +23,9 @@ cec.once( 'ready', function(client) {
   console.log( ' -- READY -- ' );
   client.sendCommand( 0xf0, CEC.Opcode.GIVE_DEVICE_POWER_STATUS );
   let repl = require('repl');
-  repl.start('>').context.client = client;
+  let replEnv = repl.start('>');
+  replEnv.context.client = client;
+  replEnv.context.CEC = CEC;
 });
 
 cec.on( 'REPORT_POWER_STATUS', function (packet, status) {
@@ -38,6 +42,10 @@ cec.on( 'REPORT_POWER_STATUS', function (packet, status) {
 
 cec.on( 'ROUTING_CHANGE', function(packet, fromSource, toSource) {
   console.log( 'Routing changed from ' + fromSource + ' to ' + toSource + '.' );
+});
+
+cec.on('REPORT_PHYSICAL_ADDRESS', function(packet, status){
+  console.log('PHYSICAL_ADDRESS', status);
 });
 
 

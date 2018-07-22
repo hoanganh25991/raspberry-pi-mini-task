@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "oled-font-5x7": "^1.0.1"
+  }
+}

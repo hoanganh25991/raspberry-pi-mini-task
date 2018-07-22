@@ -53,6 +53,19 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
+argv-tools@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/argv-tools/-/argv-tools-0.1.1.tgz#588283f3393ada47141440b12981cd41bf6b7032"
+  dependencies:
+    array-back "^2.0.0"
+    find-replace "^2.0.1"
+
+array-back@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/array-back/-/array-back-2.0.0.tgz#6877471d51ecc9c9bfa6136fb6c7d5fe69748022"
+  dependencies:
+    typical "^2.6.1"
+
 array-union@^1.0.1:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/array-union/-/array-union-1.0.2.tgz#9a34410e4f4e3da23dea375be5be70f24778ec39"
@@ -122,6 +135,10 @@ chardet@^0.4.0:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.4.2.tgz#b5473b33dc97c424e5d98dc87d55d4d8a29c8bf2"
 
+check-disk-space@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/check-disk-space/-/check-disk-space-1.5.0.tgz#66647518e1d075186c0b3aa6c24983b1f6865474"
+
 circular-json@^0.3.1:
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/circular-json/-/circular-json-0.3.3.tgz#815c99ea84f6809529d2f45791bdf82711352d66"
@@ -149,6 +166,16 @@ color-convert@^1.9.0:
 color-name@1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/color-name/-/color-name-1.1.1.tgz#4b1415304cf50028ea81643643bd82ea05803689"
+
+command-line-args@^5.0.2:
+  version "5.0.2"
+  resolved "https://registry.yarnpkg.com/command-line-args/-/command-line-args-5.0.2.tgz#c4e56b016636af1323cf485aa25c3cb203dfbbe4"
+  dependencies:
+    argv-tools "^0.1.1"
+    array-back "^2.0.0"
+    find-replace "^2.0.1"
+    lodash.camelcase "^4.3.0"
+    typical "^2.6.1"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -344,6 +371,13 @@ file-entry-cache@^2.0.0:
     flat-cache "^1.2.1"
     object-assign "^4.0.1"
 
+find-replace@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/find-replace/-/find-replace-2.0.1.tgz#6d9683a7ca20f8f9aabeabad07e4e2580f528550"
+  dependencies:
+    array-back "^2.0.0"
+    test-value "^3.0.0"
+
 flat-cache@^1.2.1:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/flat-cache/-/flat-cache-1.3.0.tgz#d3030b32b38154f4e3b7e9c709f490f7ef97c481"
@@ -352,6 +386,10 @@ flat-cache@^1.2.1:
     del "^2.0.2"
     graceful-fs "^4.1.2"
     write "^0.2.1"
+
+floyd-steinberg@~1.0.4:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/floyd-steinberg/-/floyd-steinberg-1.0.5.tgz#79c7b81e7057450a4069e6b61486e81c7890b88c"
 
 foreach@^2.0.5:
   version "2.0.5"
@@ -419,7 +457,7 @@ has@^1.0.1:
   dependencies:
     function-bind "^1.1.1"
 
-i2c@~0.2.1:
+i2c@^0.2.3, i2c@~0.2.1:
   version "0.2.3"
   resolved "https://registry.yarnpkg.com/i2c/-/i2c-0.2.3.tgz#f43f7028141026ae48af2990a374633d1dab3d2b"
   dependencies:
@@ -548,6 +586,10 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+lodash.camelcase@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/lodash.camelcase/-/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
+
 lodash@^4.17.4, lodash@^4.17.5, lodash@^4.3.0:
   version "4.17.10"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.10.tgz#1b7793cf7259ea38fb3661d4d38b3260af8ae4e7"
@@ -600,7 +642,7 @@ object-keys@^1.0.8:
   version "1.0.12"
   resolved "https://registry.yarnpkg.com/object-keys/-/object-keys-1.0.12.tgz#09c53855377575310cca62f55bb334abff7b3ed2"
 
-oled-font-5x7@^1.0.1:
+oled-font-5x7@^1.0.0, oled-font-5x7@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/oled-font-5x7/-/oled-font-5x7-1.0.1.tgz#096ef9f1e4802fb7a4f560cc9a515e5ecd686d2b"
 
@@ -671,6 +713,17 @@ pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
 
+png-to-lcd@^1.0.2, png-to-lcd@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/png-to-lcd/-/png-to-lcd-1.0.3.tgz#4331fa61994b276fceb67c5bbf61d98833c14c16"
+  dependencies:
+    floyd-steinberg "~1.0.4"
+    pngparse "~2.0.1"
+
+pngparse@^2.0.1, pngparse@~2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/pngparse/-/pngparse-2.0.1.tgz#86852de4de349f4efb1e852e7525655e5ac5dfb8"
+
 prelude-ls@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.1.2.tgz#21932a549f5e52ffd9a827f570e04be62a97da54"
@@ -720,6 +773,18 @@ rimraf@^2.2.8:
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
   dependencies:
     glob "^7.0.5"
+
+rpi-oled@^0.9.1:
+  version "0.9.1"
+  resolved "https://registry.yarnpkg.com/rpi-oled/-/rpi-oled-0.9.1.tgz#e1cc9a0eacf0825294822dc96e30be3c9f09908c"
+  dependencies:
+    check-disk-space "^1.5.0"
+    command-line-args "^5.0.2"
+    i2c "^0.2.3"
+    oled-font-5x7 "^1.0.0"
+    png-to-lcd "^1.0.2"
+    pngparse "^2.0.1"
+    system-health-monitor "^1.1.0"
 
 run-async@^2.2.0:
   version "2.3.0"
@@ -812,6 +877,10 @@ symbol-observable@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/symbol-observable/-/symbol-observable-1.0.1.tgz#8340fc4702c3122df5d22288f88283f513d3fdd4"
 
+system-health-monitor@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/system-health-monitor/-/system-health-monitor-1.1.0.tgz#7266d3c2b39cd30ea7f98b175b27bee9d3a258bf"
+
 table@^4.0.3:
   version "4.0.3"
   resolved "https://registry.yarnpkg.com/table/-/table-4.0.3.tgz#00b5e2b602f1794b9acaf9ca908a76386a7813bc"
@@ -822,6 +891,13 @@ table@^4.0.3:
     lodash "^4.17.4"
     slice-ansi "1.0.0"
     string-width "^2.1.1"
+
+test-value@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/test-value/-/test-value-3.0.0.tgz#9168c062fab11a86b8d444dd968bb4b73851ce92"
+  dependencies:
+    array-back "^2.0.0"
+    typical "^2.6.1"
 
 text-table@^0.2.0:
   version "0.2.0"
@@ -842,6 +918,10 @@ type-check@~0.3.2:
   resolved "https://registry.yarnpkg.com/type-check/-/type-check-0.3.2.tgz#5884cab512cf1d355e3fb784f30804b2b520db72"
   dependencies:
     prelude-ls "~1.1.2"
+
+typical@^2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/typical/-/typical-2.6.1.tgz#5c080e5d661cbbe38259d2e70a3c7253e873881d"
 
 underscore@1.8.2:
   version "1.8.2"
